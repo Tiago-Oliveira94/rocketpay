@@ -1,0 +1,6 @@
+/pgdata
+**/.git
+**/.gitignore
+**/.vscode
+**/docker-compose*
+**/Dockerfile*
