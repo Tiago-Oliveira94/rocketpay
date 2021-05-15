@@ -26,8 +26,8 @@ defmodule Rocketpay.User do
     |> validate_length(:password, min: 6)
     |> validate_number(:age, greater_than_or_equal_to: 18)
     |> validate_format(:email, ~r/@/)
-    |> unique_constraint([:email])
-    |> unique_constraint([:nickname])
+    |> unique_constraint(:nickname, name: :users_nickname_index)
+    |> unique_constraint(:email, name: :users_email_index)
     |> put_password_hash()
   end
 
