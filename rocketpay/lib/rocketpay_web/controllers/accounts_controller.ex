@@ -5,7 +5,7 @@ defmodule RocketpayWeb.AccountsController do
 
   action_fallback RocketpayWeb.FallbackController
 
-  def deposite(conn, params) do
+  def deposit(conn, params) do
     with {:ok, %Account{} = account} <- Rocketpay.deposit(params) do
       conn
       |>put_status(:ok)
